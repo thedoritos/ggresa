@@ -10,7 +10,9 @@ class PostsRepository {
                     return {
                         id: post.number,
                         title: post.name,
-                        url: post.url
+                        url: post.url,
+                        date: post.updated_at,
+                        author: post.created_by.screen_name
                     };
                 });
             });

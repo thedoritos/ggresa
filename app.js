@@ -1,6 +1,9 @@
 Vue.component('esa-post', {
     props: ['post'],
-    template: '<li>{{ post.title }}</li>'
+    template: '<li class="esa-post">' +
+      '<h3><a :href=post.url>{{ post.title }}</a></h3>' +
+      'by <span>{{ post.author }}</span> at <span>{{ post.date }}</span>' +
+      '</li>'
 });
 
 new Vue({
