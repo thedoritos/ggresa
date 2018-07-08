@@ -4,7 +4,14 @@
     <body>
         <h3>Ggresa</h3>
         <div id="app">
-            {{ message }}
+            <ol>
+                <esa-post
+                    v-for="post in searchResults"
+                    v-bind:post="post"
+                    v-bind:key="post.id"
+                >
+                </esa-post>
+            </ol>
         </div>
     </body>
 </html>
