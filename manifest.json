@@ -13,5 +13,8 @@
             "css": ["app.css"],
             "js": ["app.js"]
         }
+    ],
+    "web_accessible_resources": [
+        "app.html"
     ]
 }
