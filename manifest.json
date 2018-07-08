@@ -5,7 +5,7 @@
     "manifest_version": 2,
 
     "permissions": [
-        "activeTab"
+        "activeTab", "storage"
     ],
     "content_scripts": [
         {
@@ -16,5 +16,10 @@
     ],
     "web_accessible_resources": [
         "app.html", "app.js"
-    ]
+    ],
+
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    }
 }
