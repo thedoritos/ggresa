@@ -15,7 +15,7 @@
         }
     ],
     "web_accessible_resources": [
-        "app.html", "app.js"
+        "app.html", "app.js", "repository/*.js"
     ],
 
     "options_ui": {
