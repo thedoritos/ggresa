@@ -40,6 +40,7 @@ fetchOptions()
             "https://cdn.jsdelivr.net/npm/vue/dist/vue.js",
             chrome.runtime.getURL("repository/options_repository.js"),
             chrome.runtime.getURL("repository/posts_repository.js"),
+            chrome.runtime.getURL("repository/query_repository.js"),
             chrome.runtime.getURL("app.js")
         ];
 

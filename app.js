@@ -13,7 +13,7 @@ new Vue({
     },
     methods: {
         search: function() {
-            const query = "Android";
+            const query = this.$queryRepository.getQuery();
 
             this.$optionsRepository.fetchOptions()
                 .then((options) => {
