@@ -10,11 +10,15 @@ new Vue({
     },
     methods: {
         search: function() {
-            this.searchResults = [
-                { id: 0, title: "Android DataBinding Overview" },
-                { id: 1, title: "Spek: Test Your App Today" },
-                { id: 2, title: "RxAndroid is dead. Long live LiveData" }
-            ];
+            const query = "Android";
+
+            this.$optionsRepository.fetchOptions()
+                .then((options) => {
+                    return this.$postsRepository.fetchPosts(query, options)
+                })
+                .then((posts) => {
+                    this.searchResults = posts;
+                });
         }
     },
     mounted: function() {
