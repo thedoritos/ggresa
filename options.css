@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-input[type=password] {
+input[type=text], input[type=password] {
     width: 100%;
     padding: 8px 8px;
     margin: 8px 0;

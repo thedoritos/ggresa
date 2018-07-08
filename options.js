@@ -1,7 +1,10 @@
 function saveOptions() {
-    const token = document.getElementById('token').value;
+    const teamId = document.getElementById('team-id').value;
+    const accessToken = document.getElementById('access-token').value;
+
     chrome.storage.sync.set({
-        token: token
+        teamId: teamId,
+        accessToken: accessToken
     }, function() {
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
@@ -14,9 +17,11 @@ function saveOptions() {
 
 function restoreOptions() {
     chrome.storage.sync.get({
-        token: ''
+        teamId: '',
+        accessToken: ''
     }, function(items) {
-        document.getElementById('token').value = items.token;
+        document.getElementById('team-id').value = items.teamId;
+        document.getElementById('access-token').value = items.accessToken;
     });
 }
 
