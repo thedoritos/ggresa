@@ -1,0 +1,17 @@
+{
+    "name": "ggresa",
+    "version": "1.0",
+    "description": "You may find an answer on esa.io",
+    "manifest_version": 2,
+
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.google.com/search?*", "https://*.google.co.jp/search?*"],
+            "css": ["app.css"],
+            "js": ["app.js"]
+        }
+    ]
+}
