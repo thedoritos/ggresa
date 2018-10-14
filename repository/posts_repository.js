@@ -1,6 +1,6 @@
 class PostsRepository {
     fetchPosts(query, options) {
-        const path = "https://api.esa.io/v1/teams/" + options.teamId + "/posts?q=" + query;
+        const path = "https://api.esa.io/v1/teams/" + options.teamId + "/posts?q=" + query + "%20-title%3AReadme&sort=best_match&kind=stock&wip=false&order=desc";
         const requestOptions = { headers: { "Authorization": "Bearer " + options.accessToken } };
 
         return fetch(path, requestOptions)
